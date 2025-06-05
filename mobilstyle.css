@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+}
+
+
+/* #region ------- HEADER ------- */
+.header {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 9999;
+}
+.header .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: rgb(25, 75, 139);
+    border-bottom: 8px solid #00134d;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    padding: 0;
+    margin: 0;
+}
+
+.header img {
+    opacity: 70%;
+    padding-bottom: 0vh;
+    max-height: 18vh;
+    object-fit: contain;
+}
+
+.header .row div:nth-child(1) img{
+    width: 20vh;
+    display: flex;
+    justify-self: flex-start;
+    transform-origin: center;
+    animation: rotateBack 2s ease-in-out infinite alternate;
+
+}
+@keyframes rotateBack {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+}
+
+.header .row div:nth-child(2) img{
+    animation: tilt 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes tilt {
+    from {transform: skewX(-15deg);}
+    to {transform: skewX(15deg);}
+}
+
+.header .row div:nth-child(3) img{
+    animation: scalePulse 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+.header .row div:nth-child(4) img{
+    animation: scalePulse 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+
+@keyframes scalePulse {
+    from {transform: scale(0.5);}
+    to {transform: scale(0.8);}
+}
+
+.header .row div:nth-child(5) img{
+    animation: backtilt 2s ease-in-out infinite alternate;
+    transform-origin: bottom;
+}
+@keyframes backtilt {
+    from {transform: skewX(15deg);}
+    to {transform: skewX(-15deg);}
+}
+.header .row div:nth-child(6) img{
+    width: 20vh;
+    display: flex;
+    justify-self: flex-end;
+    animation: rotateForward 2s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+@keyframes rotateForward {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-90deg);}
+}
+
+header h1 {
+    position: fixed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 2vh;
+    width: 100%;
+    display: block;
+    z-index: 100000;
+    color: #00134d;
+    text-shadow: 
+        0.02em 0.02em 0.02em rgb(49, 49, 214),
+        0.04em 0.04em 0.04em rgb(49, 49, 214),
+        0.06em 0.06em 0.04em #0ff,
+        0.08em 0.08em 0.04em #fff,
+        0 0 0.2em #0ff,
+        0 0 0.4em #0ff,
+        0 0 0.6em #0ff;
+    font-size: 5vh; 
+    font-weight: bold;
+    text-align: center;
+}
+/* #endregion */
+
+/* #region ------- MAIN ------- */
+main {
+    padding-top: 20vh ;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(25, 75, 139), rgb(0, 229, 255),	rgb(30, 155, 84));
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cards .row {
+    margin: 20vh 3vw 5vh 3vw;
+
+}
+
+main .card {
+    height: 34vh;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    
+    background-image: radial-gradient(ellipse at bottom right, rgb(35, 105, 196), #00c9ff, #13e4c8, rgb(35, 105, 196) 100%);
+    background-repeat: repeat;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+}
+main .card-img-box {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    /* justify-content: start; */
+}
+
+main .card-img {
+    /* max-width: 100%;
+    max-height: 100%; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;             
+    transform: translateY(-50%);
+    object-fit: contain;
+    /* transition: all 0.3s ease; */
+}
+
+main .card-img-box:hover .card-img {
+    pointer-events: none;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%) scale(1.2);
+    max-height: 50vh;
+    height: auto;
+    max-width: 50vw;
+    width: auto;
+    position: fixed;
+    z-index: 999;
+    outline: 3px groove #00134d;
+    outline-offset: 0.8em;
+    border-radius: 1.5em;
+    box-shadow: 
+        0 0 0.8em rgb(35, 105, 196),
+        0 0 0.8em #00c9ff,
+        0 0 1.4em rgba(9, 22, 80);
+}
+
+main .card-right {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main .card-text-box {
+    display: block;
+    max-height: 80%;
+    overflow: hidden;
+}
+
+.card h5 {
+    margin-bottom: 2vh;
+    margin: 1rem;
+}
+.card-text li {
+    font-size: smaller;
+}
+
+main .btn {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    max-width: 70%;
+    margin: 1vh;
+    padding: 0.3rem 1rem;
+    background-color: rgb(25, 75, 139);
+    border: 2px solid #44bee0;
+    box-shadow: 0 4px 6px rgba(13, 21, 97, 0.6);
+    border-radius: 0.5rem; 
+    
+    color: #00c9ff;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+main .btn:hover{
+     background-color: #00c9ff;
+     border: 2px solid rgb(25, 75, 139);
+     color: rgb(25, 75, 139);
+}
+
+/* #endregion */
+
+footer{
+
+    background-color: rgb(30, 155, 84);
+    border-top: 2px solid rgb(20, 63, 36);
+    color: 	rgb(162, 221, 188);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    width: 100%;
+    height: 6vh;
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+}
+footer a:nth-child(2) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    font-size: smaller;
+    color: rgb(170, 223, 193);
+    text-decoration: none;
+    
+}
+
+footer .btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    height: 70%;
+    margin-top: 5%;
+    margin: 0.5vh;
+
+    background-color: rgb(94, 177, 130);
+    border: 2px solid rgb(20, 63, 36);
+    box-shadow: 0 4px 6px rgba(13, 21, 97, 0.6);
+    border-radius: 0.5rem; 
+    
+    color: rgb(20, 63, 36);
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+footer .btn:hover{
+     background-color: rgb(30, 155, 84);
+     border: 2px solid rgb(116, 223, 162);
+     color: rgb(170, 223, 193);
+}

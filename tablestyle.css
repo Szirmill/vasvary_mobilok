@@ -1,0 +1,132 @@
+body {
+    padding-top: 4vh ;
+    background: linear-gradient(135deg, rgb(25, 75, 139), rgb(0, 229, 255),	rgb(30, 155, 84));
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: auto;
+}
+
+caption {
+  caption-side: top;
+  width: 100%;
+  line-height: 5vh;
+  background-color: rgb(25, 75, 139);
+  border-bottom: 4px solid #00134d;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #00134d;
+  text-shadow: 
+    0.02em 0.02em 0.02em rgb(49, 49, 214),
+    0.04em 0.04em 0.04em rgb(49, 49, 214),
+    0.06em 0.06em 0.04em #0ff,
+    0.08em 0.08em 0.04em #fff,
+    0 0 0.2em #0ff,
+    0 0 0.4em #0ff,
+    0 0 0.6em #0ff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+table {
+    width: 96%;
+    max-width: 100%;
+    margin: auto;
+    border: 2px solid #00134d;
+    border-collapse: separate;
+    color: rgb(14, 49, 94);
+    overflow-x: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+    background: linear-gradient(
+    rgb(0, 229, 255) 0%,
+    rgb(52, 117, 201) 20%,
+    rgb(25, 75, 139) 50%,
+    rgb(52, 117, 201) 80%,
+    rgb(0, 229, 255) 100%
+  );
+  color: #aed8e4;
+  text-shadow: 
+        0.06em 0.06em 0.06em rgb(30, 16, 68);
+  z-index: 2;
+}
+
+td, th {
+    border: 1px solid #00134d;
+}
+
+th {
+    text-align: center;
+}
+
+th b {
+    color: rgb(26, 90, 54);
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+      text-shadow: 
+        0.06em 0.06em 0.06em rgb(141, 212, 171);
+}
+
+td {
+    background-color: #00c9ff;
+    padding: 0 1rem;
+}
+
+tbody tr:hover td {
+    background-color: rgb(25, 75, 139);
+    color: #00c9ff;
+}
+
+/* --- FOOTER --- */
+
+tfoot td{
+    padding: 0.5rem;
+    background-color: rgb(30, 155, 84);
+    border: 1px solid rgb(20, 63, 36);
+    color: 	rgb(162, 221, 188);
+    line-height: 3vh;
+}
+/* BACK BUTTON */
+tfoot td:nth-child(1) a {
+    display: block;
+    height: 60%;
+    width: auto;
+    margin: auto;
+    padding: 0 0.5rem;
+    text-align: center;
+
+    background-color: rgb(94, 177, 130);
+    border: 2px solid rgb(20, 63, 36);
+    box-shadow: 0 4px 6px rgba(13, 21, 97, 0.6);
+    border-radius: 0.5rem; 
+
+    color: rgb(20, 63, 36);
+    text-decoration: none;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+tfoot td:nth-child(1) a:hover{
+     background-color: rgb(30, 155, 84);
+     border: 2px solid rgb(116, 223, 162);
+     color: rgb(170, 223, 193);
+}
+
+/* SOURCE */
+tfoot td:nth-child(2) {
+    text-align: right;
+    padding-right: 1vw;;
+
+}
+tfoot td:nth-child(2) a{
+    font-size: smaller;
+    color: rgb(170, 223, 193);
+    text-decoration: none;
+    font-style: italic
+    
+}
